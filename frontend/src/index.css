@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at 20% 10%, rgba(56,189,248,0.18), transparent 20%),
+    radial-gradient(circle at 85% 10%, rgba(168,85,247,0.16), transparent 18%),
+    linear-gradient(180deg, #05070f 0%, #080d1d 45%, #02040a 100%);
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(56,189,248,0.35);
+  color: #ffffff;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+.glass-panel {
+  background: rgba(10, 18, 34, 0.75);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: rgba(56,189,248,0.75);
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
